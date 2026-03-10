@@ -18,14 +18,18 @@ export function ModeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={() => {
+        const next = resolvedTheme === "dark" ? "light" : "dark";
+        console.log("Current theme:", resolvedTheme, "Switching to:", next);
+        setTheme(next);
+      }}
       className="flex items-center justify-center p-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
       aria-label="Toggle theme"
     >
       {resolvedTheme === "dark" ? (
-        <FiSun className="h-5 w-5" />
+        <FiSun className="h-5 w-5 text-yellow-500" />
       ) : (
-        <FiMoon className="h-5 w-5" />
+        <FiMoon className="h-5 w-5 text-zinc-900" />
       )}
     </button>
   );
