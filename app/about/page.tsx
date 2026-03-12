@@ -6,12 +6,6 @@ import { TechStack } from "@/components/TechStack";
 import { ValueCard } from "@/components/ValueCard";
 import { TeamCard } from "@/components/TeamCard";
 import { OurStory } from "@/components/OurStory";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 export default function AboutPage() {
   return (
@@ -174,48 +168,6 @@ export default function AboutPage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="px-4 py-24 bg-muted/30">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Frequently Asked Questions</h2>
-            <p className="text-muted-foreground text-lg">
-              Everything you need to know about our process and services.
-            </p>
-          </div>
-
-          <Accordion type="single" collapsible className="w-full">
-            {[
-              {
-                q: "What is your typical project timeline?",
-                a: "Project timelines vary depending on scope. A standard web application usually takes 8-12 weeks from discovery to launch."
-              },
-              {
-                q: "Do you offer post-launch support?",
-                a: "Yes, we provide flexible maintenance and support packages to ensure your application stays secure and up-to-date."
-              },
-              {
-                q: "Which technologies do you specialize in?",
-                a: "We specialize in modern web technologies including React, Next.js, TypeScript, Node.js, and various cloud platforms like AWS and Supabase."
-              },
-              {
-                q: "Can you help with existing projects?",
-                a: "Absolutely. We can perform code audits, implement new features, or help with the digital transformation of legacy systems."
-              }
-            ].map((faq, idx) => (
-              <AccordionItem key={idx} value={`item-${idx}`}>
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
-                  {faq.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-base pb-6 leading-relaxed">
-                  {faq.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
         </div>
       </section>
     </div>

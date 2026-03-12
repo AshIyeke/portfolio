@@ -10,8 +10,8 @@ import {
   IconBrain,
   IconArrowRight
 } from "@tabler/icons-react";
-import { cn } from "@/app/lib/utils";
 import { NavbarButton } from "@/components/ui/resizable-navbar";
+import { ServiceCard } from "@/components/ServiceCard";
 
 const services = [
   {
@@ -74,7 +74,13 @@ export function WhatWeOffer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <ServiceCard key={index} service={service} index={index} />
+            <ServiceCard 
+              key={index} 
+              index={index}
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+            />
           ))}
         </div>
 
@@ -95,32 +101,5 @@ export function WhatWeOffer() {
         </motion.div>
       </div>
     </section>
-  );
-}
-
-function ServiceCard({ service, index }: { service: typeof services[0], index: number }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.1 * index }}
-      whileHover={{ y: -5 }}
-      className={cn(
-        "p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800",
-        "bg-white dark:bg-zinc-900/50 hover:shadow-xl hover:shadow-indigo-500/10",
-        "transition-all duration-300 group"
-      )}
-    >
-      <div className="mb-4 inline-flex items-center justify-center p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl group-hover:scale-110 transition-transform duration-300">
-        {service.icon}
-      </div>
-      <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3">
-        {service.title}
-      </h3>
-      <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-        {service.description}
-      </p>
-    </motion.div>
   );
 }
