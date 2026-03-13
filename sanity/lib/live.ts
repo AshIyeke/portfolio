@@ -4,6 +4,14 @@
 import { defineLive } from "next-sanity/live";
 import { client } from './client'
 
+// Token with 'viewer' permissions or higher
+const token = process.env.SANITY_API_READ_TOKEN;
+
 export const { sanityFetch, SanityLive } = defineLive({
-  client,
+  client: client.withConfig({ 
+    // Live content is fetched with a token to enable Draft Mode and real-time updates
+    token,
+  }),
+  serverToken: token,
+  browserToken: token,
 });
