@@ -78,14 +78,6 @@ export default function Menubar() {
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
-                href="/login"
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Login
-              </NavbarButton>
-              <NavbarButton
                 href="/book"
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"

@@ -9,5 +9,5 @@ const dataset = 'production'
 
 export default defineCliConfig({
   api: { projectId, dataset },
-  studioHost: 'portfolio-march-2026'
+  studioHost: 'kravex-march-2026'
 })

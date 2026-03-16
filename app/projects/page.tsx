@@ -23,7 +23,7 @@ export default async function ProjectsPage() {
       ) : (
         <div className="text-center py-20 bg-muted/30 rounded-2xl">
           <h3 className="text-xl font-medium mb-2">No projects found</h3>
-          <p className="text-muted-foreground">We haven't added any projects to our portfolio yet. Check back soon!</p>
+          <p className="text-muted-foreground">We haven't added any projects to Kravex yet. Check back soon!</p>
         </div>
       )}
     </div>

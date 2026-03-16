@@ -11,7 +11,7 @@ export const Footer = () => {
         {/* Brand & Newsletter Section */}
         <div className="md:col-span-2 space-y-8">
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-foreground">Portfolio</h2>
+            <h2 className="text-2xl font-bold text-foreground">Kravex</h2>
             <p className="text-muted-foreground max-w-sm">
               Building digital experiences that matter. From concept to code, we bring your vision to life with modern technology and design.
             </p>
@@ -80,7 +80,7 @@ export const Footer = () => {
             <a href="#" className="p-2 rounded-full border border-border hover:bg-accent transition-all hover:scale-110"><IconBrandInstagram size={20} /></a>
           </div>
           <div className="space-y-2">
-            <p className="text-sm text-muted-foreground italic">hello@portfolio.com</p>
+            <p className="text-sm text-muted-foreground italic">hello@kravex.com</p>
             <p className="text-sm text-muted-foreground">+1 (555) 000-0000</p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export const Footer = () => {
 
       {/* Bottom Copyright */}
       <div className="max-w-7xl mx-auto pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-        <p>© {new Date().getFullYear()} Portfolio Inc. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Kravex Inc. All rights reserved.</p>
         <div className="flex gap-8">
           <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>

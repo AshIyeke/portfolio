@@ -11,7 +11,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useRef, useState, useEffect } from "react";
 
-
 interface NavbarProps {
   children: React.ReactNode;
   className?: string;
@@ -123,7 +122,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     const handleLocationChange = () => {
       const currentPath = window.location.pathname;
       const currentHash = window.location.hash;
-      
+
       // Try to match path first, then hash if needed
       let index = items.findIndex((item) => item.link === currentPath);
       if (index === -1) {
@@ -158,7 +157,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           }}
           className={cn(
             "relative px-4 py-2 text-neutral-600 transition-colors duration-200 dark:text-neutral-300",
-            active === idx && "text-neutral-900 dark:text-white"
+            active === idx && "text-neutral-900 dark:text-white",
           )}
           key={`link-${idx}`}
           href={item.link}
@@ -278,7 +277,7 @@ export const NavbarLogo = () => {
         width={30}
         height={30}
       />
-      <span className="font-medium text-black dark:text-white">Startup</span>
+      <span className="font-medium text-black dark:text-white">Kravex</span>
     </Link>
   );
 };
