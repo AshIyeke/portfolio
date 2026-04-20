@@ -162,8 +162,8 @@ const ContactSection: React.FC = () => {
                 index={2}
                 icon={Phone}
                 title="Phone"
-                value="+61 749 530 742"
-                href="tel:+61749530742"
+                value="+234 814 306 6124"
+                href="tel:+2348143066124"
                 iconBg="bg-blue-50 dark:bg-blue-900/20"
                 iconColor="text-blue-400"
               />
